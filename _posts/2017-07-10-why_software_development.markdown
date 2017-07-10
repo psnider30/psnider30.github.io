@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Why Software Development?"
+date:   2017-07-10 20:56:54 +0000
+---
+
+
+My interest in software development was always somewhat present, like a pilot light nobody had noticed was burning and needed more gas, including me. When I was a Construction Management/Engineering student and I was learning drafting with AutoCAD software I considered the possibilities of a dual degree in Architecture. That way I could draft my own plans and manage the building process. I liked the idea of designing, having control, and creating more opportunities.
+
+When I worked in Construction Management it was always my strong suit to learn and teach project management and scheduling software. My excel skills grew as it was important to efficiently track all the different materials, subcontractors, design changes, etc. on large commercial projects. When I worked in Solar I again enjoyed using the design software the company developed. When I was working in Aerospace I further mastered excel while tracking thousands of parts and orders and modeling complex manufacturing processes. I was always striving to make things more automated and I knew excel was very useful, but not the optimal tool for the job. Occasionally I needed to contact the IT department to design new SAP reports with new data points, and I knew this could be 100X better if I were able to implement these changes myself. When I was earning my MBA I found my interests growing around entrepreneurship and building financial models. I needed a new career that would satisfy my real interests, but it didn't immediately occur to me what I should be doing. My golf game wasn't getting me on the PGA tour any time soon, so I needed a new idea.
+
+I also felt something was missing from my former careers. In some ways I needed more creativity and the ability to break free from convention when more efficiency was possible. I liked the models I could/can build in excel, but I knew software development would open up much more opportunity and be a much more enjoyable and satisfying career. I first experimented with building a website with WordPress for developers and AWS hosting, but I knew I would need more skills. After I moved back to the CA Bay Area from San Diego I began learning the basics of programming on sites such as Code Academy and Udactiy. I even took the time to get certified as a Java SE 8 Programmer I. While I don't see myself working very much with Java, I think it helped me greatly to understand object oriented programming and how the newer languages have evolved. I completed the Flatiron Bootcamp prep course and then decided to enroll in the Full Stack program. Now the journey continues to becoming a software engineer!
+
