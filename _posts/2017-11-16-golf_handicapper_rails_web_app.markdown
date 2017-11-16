@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Golf Handicapper Rails Web App"
-date:       2017-11-16 20:48:30 +0000
+title:      "Golf Handicapper Rails App"
+date:       2017-11-16 15:48:31 -0500
 permalink:  golf_handicapper_rails_web_app
 ---
 
