@@ -1,14 +1,14 @@
 ---
 layout: post
 title:      "Adding jQuery to Golf Handicapper"
-date:       2017-12-23 02:35:36 +0000
+date:       2017-12-22 21:35:36 -0500
 permalink:  adding_jquery_to_golf_handicapper
 ---
 
 
 Adding the jQuery Front End to my rails handicapper web app was great for allowing the app to me more interactive without page reloads. It is nice how it is fairly easy to create a json backend for a Rails app by using the Active Model Serializer gem. I also made use of the to_json method in the GolfCourse index action, which is convenient for small api customizations without many attributes or nesting. The app uses handlebars templates for new elements that need to be rendered based on the json and/or js Objects from ajax requests. Once the json backend is set up, its very convenient to make ajax requests. 
 
-Of course building the html template twice (once in html and once in handlebars) can't be avoided, but handlebars is great to reproduce the same html from the json. With the json back-end and handlebars template, it does require more thought when changing the rails views. For example, when I changed the rounds to be  ordered by created_at desc at the end of the project. This made wonder if I needed to change the json backend, but luckily it was easily solved by sorting the order of rounds in the js files, which only required calling reverse on the this.rounds attribute.
+Of course building the html template twice (once in html and once in handlebars) can't be avoided, but handlebars is great to reproduce the same html from the json. With the json back-end and handlebars template, it does require more thought when changing the rails views. For example, when I changed the rounds to be  ordered by created_at desc at the end of the project. This made me wonder if I needed to change the json backend, but luckily it was easily solved by sorting the order of rounds in the js files, which only required calling reverse on the this.rounds attribute.
 
 I rendered the Golfer show page using jQuery and an Active Model Serialization json backend via a next button click event. The code in golfer.js makes sure to re-loop when the last Golfer id is reached and begin again at the first Golfer id. I put these values in the data-attributes in my html.erb file, which is a pattern I made great use of throughout my web app to allow javascript to grab variables that originated in rails when needed. A handlebars helper method ifPermissionGolfer is added so only the golfer who owns the resource can do posting, editing, and deleting actions.
 
