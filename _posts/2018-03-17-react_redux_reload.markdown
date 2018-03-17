@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "React, Redux, Reload!"
-date:       2018-03-17 08:13:49 +0000
+date:       2018-03-17 04:13:50 -0400
 permalink:  react_redux_reload
 ---
 
 
-Building this app has been an incredible journey starting with a fairly modest understanding of react and redux and ending with an awesome app that taught me an absolute ton. I'm now immensely more comfortable with the data flow of react and react & redux. I first built my app's basic framework with react and then converted also use redux before I added some cool functionality and started to feel like new features were only limited by my imagination.
+Building this app has been an incredible journey starting with a fairly modest understanding of react and redux and ending with an awesome app that taught me an absolute ton. I'm now immensely more comfortable with the data flow of react and react & redux. I first built my app's basic framework with react and then converted to also use redux before I added some cool functionality and started to feel like  adding new features was only limited by my imagination.
 
 My app fetches stock market data based on a symbol for five different layouts of quote/main, change summary (over different time periods), financials, fundamentals, and daily or monthly historical returns. One of my first challenges was fetching the stock data from 7 different API endpoints for each symbol and assigning the values to different object keys for an asset before passing the asset to my reducer. Luckily there was a perfect solution using Promise.all which can take in an array of fetches and then assign the data when the promise returns by array index from the fetch.
 
@@ -18,6 +18,8 @@ The next step was the rails API backend with my assets and users in a many to ma
 
 With the client side connected to the rails API, the next question to solve was no persistence on the client side when the page was refreshed and redux sate was reset to initial values. I found a great way to store and re-fetch asset data in my app by creating assetsInMemory in redux state and linking it to a sessionStorage key which I kept in sync (in redux state) with assets as they were added, updated, or deleted. However, when the page was refreshed I would lose assets, but keep assetsInMemory, and when refreshed again I lost the assetsInMemory also due to syncing them with assets. 
 
+Thus, I needed to add a window load event listener and re-fetch the assets from assetsInMemory if the two were out of sync (as in assets are cleared, but assetsIn Memory remain). You may have to view my code to follow that logic, but it gave me persisted client state that also fetched fresh price data for my stocks. I implemented this in componentWillReceiveProps and also added a button in each layout to refresh the stock data.
+
 ```
 onLoad(event) {
     const { assets, assetsInMemory, actions, currentUser } = this.props;
@@ -27,8 +29,6 @@ onLoad(event) {
     }
   }
 ```
-
-Thus, I needed to add a window load event listener and re-fetch the assets from assetsInMemory if the two were out of sync (as in assets are cleared, but assetsIn Memory remain). You may have to view my code to follow that logic, but it gave me persisted client state that also fetched fresh price data for my stocks. I implemented this in componentWillReceiveProps and also added a button in each layout to refresh the stock data.
 
 I greatly enjoyed finding interesting ways to interweave fetching stock data, react state, redux state, dispatch actions, reducers, and a rails API backend into a very cool finance app that taught me a bunch and gives me the confidence that I'm now armed to build web apps with another powerful framework.
 
