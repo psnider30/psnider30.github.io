@@ -6,7 +6,7 @@ permalink:  react_redux_reload
 ---
 
 
-Building this app has been an incredible journey starting with a fairly modest understanding of react and redux and ending with an awesome app that taught me an absolute ton. I'm now immensely more comfortable with the data flow of react and react & redux. I first built my app's basic framework with react and then converted to also use redux before I added some cool functionality and started to feel like  adding new features was only limited by my imagination.
+I first built my app's basic framework of components, state and props with React. As the common aspects of state grew accross components more central orginization was the next logical step. Thus, I integrated Redux to manage all core pieces of state including sessions and assets with key metrics associated with the current user. Adding new features becomes effortless with the clean flow between components, props, actions, and reducers,
 
 My app fetches stock market data based on a symbol for five different layouts of quote/main, change summary (over different time periods), financials, fundamentals, and daily or monthly historical returns. One of my first challenges was fetching the stock data from 7 different API endpoints for each symbol and assigning the values to different object keys for an asset before passing the asset to my reducer. Luckily there was a perfect solution using Promise.all which can take in an array of fetches and then assign the data when the promise returns by array index from the fetch.
 
